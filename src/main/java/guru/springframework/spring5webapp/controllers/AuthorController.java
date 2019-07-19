@@ -14,6 +14,7 @@ public class AuthorController {
         this.authorRepository = authorRepository;
     }
 
+
     @RequestMapping("/authors")
     public String getAuthor(Model model){
         model.addAttribute("authors",authorRepository.findAll());
