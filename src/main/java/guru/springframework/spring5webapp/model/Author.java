@@ -13,7 +13,7 @@ public class Author {
     private Long id;
 
 
-
+    @OneToOne
     private FLName flName;
 
 

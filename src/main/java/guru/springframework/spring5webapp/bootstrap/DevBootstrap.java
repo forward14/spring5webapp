@@ -37,8 +37,6 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         FLName flName = new FLName();
         flName.setFirstName("Eric");
         flName.setLastName("Evans");
-        flName.setFirstName("Rob");
-        flName.setLastName("Johnson");
         flNameRepository.save(flName);
 
         //Eric
@@ -54,6 +52,9 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Author rob = new Author(flName);
         Book noEJB = new Book("J2EE Development without EJB","23444",publisher);
         rob.getBooks().add(noEJB);
+        flName.setFirstName("Rob");
+        flName.setLastName("Johnson");
+        flNameRepository.save(flName);
 
         authorRepository.save(rob);
         bookRepository.save(noEJB);
